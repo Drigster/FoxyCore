@@ -17,8 +17,21 @@ public class MessageManager {
         p.sendMessage(message);
     }
 
+    public static void sendMessageWithPlaceholder(Player p, String code, String placeholder, String filler){
+        String message = createLocalizedStringWithPlaceholder(code, placeholder, filler);
+        message = createLocalizedString("prefix") + message;
+
+        p.sendMessage(message);
+    }
+
+    public static void sendMessageWithPlaceholder(Player p, String code, List<String> placeholders, List<String> fillers){
+        String message = createLocalizedStringWithPlaceholder(code, placeholders, fillers);
+        message = createLocalizedString("prefix") + message;
+
+        p.sendMessage(message);
+    }
+
     public static String createLocalizedString(String code){
-        System.out.println("manager " + localization);
         String localizedString = localization.getString(code);
         if(localizedString == null){
             localizedString = localization.getDefaults().getString(code);
@@ -49,5 +62,4 @@ public class MessageManager {
         }
         return string;
     }
-
 }

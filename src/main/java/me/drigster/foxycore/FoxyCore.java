@@ -20,6 +20,5 @@ public final class FoxyCore extends JavaPlugin {
 
     public static void setLocalization(final FileConfiguration localization) {
         FoxyCore.localization = localization;
-        System.out.println("set " + localization);
     }
 }
