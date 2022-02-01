@@ -1,0 +1,5 @@
+name: FoxyCore
+version: '${project.version}'
+main: me.drigster.foxycore.FoxyCore
+api-version: 1.18
+description: Core for Foxy plugins
